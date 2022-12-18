@@ -1,0 +1,7 @@
+<div>XML Page</div>
+<div class = "main-last">
+    <h1>Last calculations</h1>
+    <p>Num: <%=Article.order("created_at").last.title%></p>
+    <p>Result: <%=Article.order("created_at").last.body%></p>
+    <%=link_to 'Go home', root_path%>
+</div>

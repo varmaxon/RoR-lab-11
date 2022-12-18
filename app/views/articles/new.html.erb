@@ -1,0 +1,17 @@
+<h1>Ввод значения n</h1>
+
+<div class="db">
+  <%= form_with model: @article do |form| %>
+    <div>
+      <%= form.label 'input value (N):' %><br>
+      <%= form.text_field :title %>
+      <% @article.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="task">
+      <%= form.submit "Рассчитать" %>
+    </div>
+  <% end %>
+</div>

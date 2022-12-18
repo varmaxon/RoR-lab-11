@@ -1,0 +1,26 @@
+<h1>Входные данные: n = <%= @article.title %></h1>
+<h1>Выходные данные:</h1>
+
+<div class="table_pos">
+<table>
+  <tbody>
+    <% mas = @article.body.split(' ') %>
+    <% mas1 = [] %>
+    <% mas2 = [] %>
+    <% mas.each_index do |item| %>
+      <% if item % 2 == 0 %>
+        <% mas1.push(mas[item]) %>
+      <% else %>
+        <% mas2.push(mas[item]) %>
+      <% end %>
+    <% end %>
+    
+    <% (mas1.length).times do |i| %>
+      <tr>
+        <td><%= mas1[i] %></td>
+        <td><%= mas2[i] %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+</div>
